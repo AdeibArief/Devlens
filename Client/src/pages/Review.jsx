@@ -55,7 +55,7 @@ const Review = () => {
     setStreaming(true);
 
     try {
-      const response = await fetch("http://localhost:5001/api/review/stream", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/review/stream`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
